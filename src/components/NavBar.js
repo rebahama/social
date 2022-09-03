@@ -10,10 +10,12 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/UseClickOutsideToggle";
+import { removeTokenTimestamp } from "../utilis/utilis";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  removeTokenTimestamp();
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
